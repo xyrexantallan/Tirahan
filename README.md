@@ -29,9 +29,12 @@ Boarding house owners currently manage tenants, bills, and repairs across handwr
 
 ## Setup Steps
 1. Clone the repository.
-2. Copy `.env.example` to `.env` and fill in Supabase credentials.
+2. Copy `.env.example` to `.env`. Keep `VITE_USE_MOCK=true` to run the auth screens without a backend; set it to `false` once Spring Boot is running.
 3. Run `npm install`.
-4. Run `npm run dev`.
+4. Run `npm run dev` and open http://localhost:5173.
+
+## Authentication Screens
+Login, Register, Forgot/Reset Password and Edit Account live in `src/pages/`. All server calls go through `src/api/authApi.js`, which lists the Spring Boot endpoints it expects.
 
 ## Task Board
 [Trello Board](https://trello.com/invite/b/6ac71e8edf06c097020b5963/ATTI2771b646fc6d8af5a49236c7b3b3fddfFEEF14D4/tirahan-boarding-house-management-system)
